@@ -1,14 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function Cart(props) {
     const [qty, setQty] = useState(0);
 
+    useEffect(() => {
+        
+    }, [])
+    
     const inc = () => {
         setQty(qty + 1);
     }
 
+
+    /**
+     * 
+     * @returns this function is for decreasing
+     */
     const dec = () => {
         if (qty==0) return;
-        setQty(qty - 1);
+        setQty(qty-1);
+        //
     }
 
    
